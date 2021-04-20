@@ -86,3 +86,40 @@ nav ul {
   height: 2px;
   margin-bottom: 8px;
 }
+
+/* support for desktop */
+@media only screen and (min-width: 600px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  #nav-toggle {
+    display: none;
+  }
+
+  nav {
+    transform: unset;
+    transform-origin: unset;
+    position: static;
+    width: auto;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 10px 10px;
+    position: relative;
+  }
+
+  #nav ul li:hover {
+    background: unset;
+  }
+
+  #navbar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
