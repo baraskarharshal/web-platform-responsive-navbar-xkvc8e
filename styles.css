@@ -2,9 +2,87 @@
   --lightblack: #338;
   --black: black;
   --green: #55d5ab;
+  --darkgreen: #50a287;
+  --white: white;
 }
 
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar {
+  background: var(--green);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+
+#logo #logo-name {
+  border: 1px solid var(--black);
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 30px;
+  border-radius: 3px;
+  letter-spacing: 3px;
+}
+
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--green);
+  transform-origin: top;
+  transform: scale(1, 0);
+  transition: all ease-in-out 200ms;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav ul li {
+  padding: 10px 10px;
+}
+
+#nav ul li:hover {
+  background: var(--darkgreen);
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+#nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle-label div {
+  width: 30px;
+  background: var(--white);
+  height: 2px;
+  margin-bottom: 8px;
 }
